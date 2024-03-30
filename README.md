@@ -2,9 +2,8 @@
 This package contains a template of node-express-typescript server.
 This package is built to handle JWT authentication with error handling using middlewares.
 To get started a user route is added. using this template you can create your routes.
-MongoDB is configured but you can customize the DB based upon your requirement.
+Sequalize with mysql is configured but you can customize the DB based upon your requirement.
 Morgan logger is used for logging.
-Migrate-mongo is used for migrations and faker is used for creating test db.
 
 # Project structure
 ```
@@ -17,7 +16,6 @@ Migrate-mongo is used for migrations and faker is used for creating test db.
     - services                           #Services for the routes
     - utils                              #Utils
     - .env.example                       #Environmental variables
-    - migrate-mongo-config.js            #Config file of migrate mongo
     - package.json
     - README.MD
     - tsconfig.json
@@ -40,8 +38,8 @@ npm init node-express-ts-boilerplate <project-name>
 Clone the repo:
 
 ```bash
-git clone --depth 1 https://github.com/vigneshdemitro/node-express-ts-boilerplate.git
-cd node-express-ts-boilerplate.git
+git clone --depth 1 https://github.com/vigneshdemitro/node-express-ts-sql-boilerplate.git
+cd <project-name>
 ```
 
 Install the dependencies
@@ -54,14 +52,6 @@ $ npm install
 
 - copy .env.example and create .env
 - .env can be configured according to the usage
-
-## Generating dataset
-
-```bash
-$ npm run migrate
-
-This creates the users with dummy data with help of faker-js
-```
 
 ## Running the app
 
