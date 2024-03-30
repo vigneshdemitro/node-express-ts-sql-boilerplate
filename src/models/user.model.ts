@@ -9,6 +9,8 @@ interface UserAttributes {
     password: string;
     role: UserRole;
     gender: Gender;
+    createdAt?: Date;
+    updatedAt?: Date;
 }
 
 class User extends Model<UserAttributes> implements UserAttributes {
@@ -18,6 +20,8 @@ class User extends Model<UserAttributes> implements UserAttributes {
     public password!: string;
     public role!: UserRole;
     public gender!: Gender;
+    public readonly createdAt?: Date;
+    public readonly updatedAt?: Date;
 }
 
 User.init(
@@ -51,6 +55,16 @@ User.init(
             allowNull: true,
             type: DataTypes.ENUM(Gender.MALE, Gender.FEMALE),
             defaultValue: null,
+        },
+        createdAt: {
+            allowNull: false,
+            type: DataTypes.DATE,
+            defaultValue: DataTypes.NOW,
+        },
+        updatedAt: {
+            allowNull: false,
+            type: DataTypes.DATE,
+            defaultValue: DataTypes.NOW,
         },
     },
     {
