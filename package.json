@@ -1,18 +1,27 @@
 {
-  "name": "server",
+  "name": "create-node-express-ts-sql-boilerplate",
   "version": "1.0.0",
-  "description": "Created with @vigneshdemitro/node-express-ts-boilerplate",
+  "description": "node express boilerplate using ts",
   "main": "server.js",
   "scripts": {
     "build": "npx tsc",
     "start": "node dist/server.js",
     "dev": "nodemon src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "migrate": "npx migrate-mongo up",
-    "migrate:down": "npx migrate-mongo down"
+    "migrate": "npx sequelize db:migrate",
+    "migrate:down": "npx sequelize db:migrate:undo"
+  },
+  "bin": "bin/cli.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vigneshdemitro/node-express-ts-sql-boilerplate.git"
   },
   "author": "Vigneshwar <vigneshdemitro@gmail.com>",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vigneshdemitro/node-express-ts-sql-boilerplate/issues"
+  },
+  "homepage": "https://github.com/vigneshdemitro/node-express-ts-sql-boilerplate#readme",
   "dependencies": {
     "@faker-js/faker": "^8.4.1",
     "@types/jsonwebtoken": "^9.0.6",
@@ -48,5 +57,18 @@
     "nodemon": "^3.1.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
-  }
+  },
+  "keywords": [
+    "node",
+    "typescript",
+    "node.js",
+    "boilerplate",
+    "express",
+    "rest",
+    "api",
+    "mysql",
+    "sql",
+    "es6",
+    "passport"
+  ]
 }

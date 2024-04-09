@@ -51,6 +51,8 @@ module.exports = {
       name: faker.person.firstName(),
       role,
       gender: faker.person.sex(),
+      createdAt: new Date(),
+      updatedAt: new Date(),
     });
 
     const admin = await createRandomUser('admin');
