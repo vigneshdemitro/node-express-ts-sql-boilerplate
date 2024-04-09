@@ -25,12 +25,12 @@ Morgan logger is used for logging.
 To create a project, simply run:
 
 ```bash
-npx create-node-express-ts-boilerplate <project-name>
+npx create-node-express-ts-sql-boilerplate <project-name>
 ```
 Or
 
 ```bash
-npm init node-express-ts-boilerplate <project-name>
+npm init node-express-ts-sql-boilerplate <project-name>
 ```
 
 ## Manual Installation
